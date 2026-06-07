@@ -4,8 +4,15 @@
    Bricolage Grotesque + Hanken Grotesk · 4 thèmes [data-theme]
    ================================================================= */
 
-/* ---------- Thèmes (slate par défaut sur :root) ---------- */
+/* ---------- Thèmes (sky « Ciel d'altitude » par défaut sur :root) ----------
+   Thème unique des maquettes : bleu crépuscule + brume nuageuse + soleil bas.
+   Contrastes validés WCAG AA. Les autres thèmes restent en repli (opt-in). */
 :root,
+:root[data-theme="sky"] {
+  --canvas:#eef3fa; --surface:#ffffff; --surface-alt:#e2ebf6;
+  --ink:#16233a; --muted:#586a85; --line:#d8e2f0;
+  --primary:#1d3b5e; --accent:#1c74bd; --accent-ink:#ffffff;
+}
 :root[data-theme="slate"] {
   --canvas:#f6f4f0; --surface:#ffffff; --surface-alt:#ece9e2;
   --ink:#1b2533; --muted:#5c6675; --line:#e2ded5;
