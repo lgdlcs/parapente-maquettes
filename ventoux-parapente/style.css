@@ -137,6 +137,8 @@ h1,h2,h3 { font-family:var(--font-display); font-weight:700; line-height:1.04; l
 .hero__video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2;
   will-change:transform; transform:translateZ(0); backface-visibility:hidden;
   animation:heroFade 1.6s var(--ease) both, heroKen 26s ease-in-out infinite alternate; }
+/* Vrai clip vidéo auto-hébergé : pas de Ken Burns (la vidéo bouge déjà), on garde juste le fondu. */
+.hero__video.is-clip { animation:heroFade 1.6s var(--ease) both; transform:translateZ(0); }
 @keyframes heroFade { from{opacity:0;} to{opacity:1;} }
 @keyframes heroKen { from{transform:scale(1.05) translateZ(0);} to{transform:scale(1.13) translateY(-2%) translateZ(0);} }
 /* Hero YouTube : révélée seulement quand la vidéo joue (.is-playing) → sinon poster hero.jpg.
