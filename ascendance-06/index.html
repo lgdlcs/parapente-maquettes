@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="charcoal">
+<html lang="fr" data-theme="sky">
 <head>
   <meta name="robots" content="noindex,nofollow">
   <meta charset="UTF-8">
@@ -25,10 +25,6 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Locomotive Scroll (défilement fluide + parallaxe). Désactivé si prefers-reduced-motion. -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
-
   
   <script type="application/ld+json">
   {
@@ -40,8 +36,15 @@
     "image": "https://lgdlcs.github.io/parapente-maquettes/ascendance-06/images/hero.jpg",
     "telephone": "06 61 42 08 64",
     "email": "contact@ascendance06.com",
+    "priceRange": "90–170 €",
     "address": { "@type": "PostalAddress", "addressLocality": "Gourdon", "addressRegion": "Côte d'Azur", "addressCountry": "FR" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4,5", "reviewCount": "60" }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4,5", "reviewCount": "60" },
+    "sameAs": ["https://www.google.com/maps/search/?api=1&query=Ascendance+parapente+Gourdon", "https://fr-fr.facebook.com/people/Ascendance-%C3%89cole-de-Parapente/100008434779798/", "https://www.google.com/maps/search/?api=1&query=Ascendance+parapente+Gourdon"],
+    "makesOffer": [
+      { "@type": "Offer", "name": "Biplace Découverte", "price": "90", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Biplace Performance", "price": "120", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Biplace Privilège", "price": "170", "priceCurrency": "EUR" }
+    ]
   }
   </script>
 
@@ -80,9 +83,7 @@
     </div>
   </header>
 
-  <!-- Conteneur Locomotive : la navbar, le WhatsApp flottant et la lightbox restent HORS du conteneur
-       (sinon le position:fixed casse sous la transformation de Locomotive). -->
-  <div data-scroll-container>
+  <div>
   <main id="main">
 
   <!-- ============ HERO VIDÉO ============ -->
@@ -93,7 +94,7 @@
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__bars" aria-hidden="true"></div>
-    <div class="wrap hero__content" data-scroll data-scroll-speed="1.6">
+    <div class="wrap hero__content">
       <p class="eyebrow eyebrow--light" data-reveal>Gourdon · Côte d'Azur</p>
       <h1 class="hero__title" data-reveal>Le parapente de la Côte d'Azur, entre mer et montagnes.</h1>
       <p class="hero__sub" data-reveal>École professionnelle de parapente à Gourdon depuis 1990, labellisée École Française de Vol Libre. Baptêmes et formations toute l'année, encadrés par des moniteurs brevetés d'État — la mer et les sommets sous vos pieds, en toute sécurité.</p>
@@ -102,41 +103,7 @@
         <a class="btn btn--ghost btn--lg" href="#stages">Voir les formations</a>
       </div>
     </div>
-    <a class="hero__scroll" href="#intro" aria-label="Descendre"><span></span></a>
-  </section>
-
-  <!-- ============ POURQUOI NOUS ============ -->
-  <section class="section" id="intro">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Pourquoi voler avec nous</p>
-        <h2 class="section__title">300 jours de soleil, mer et sommets.</h2>
-        <p class="section__lead">À Gourdon, sur les hauteurs de la Côte d'Azur, nous accompagnons votre envol depuis 1990. De votre premier baptême à votre brevet de pilote, nos moniteurs brevetés d'État vous guident dans un cadre unique, entre Méditerranée et préalpes.</p>
-      </div>
-
-      <div class="pillars">
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">01</span>
-          <h3>Moniteurs brevetés d'État</h3>
-          <p>Une équipe pédagogique professionnelle qui favorise une formation individualisée, adaptée au rythme et à la progression de chacun.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">02</span>
-          <h3>École labellisée depuis 1990</h3>
-          <p>Créée en 1990, Ascendance reçoit le label École Française de Vol Libre chaque année depuis sa création. Un gage de sérieux et de sécurité.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">03</span>
-          <h3>Mer et montagnes à 360°</h3>
-          <p>Décollages sur les crêtes du plateau de Caussols et de Cavillore, vue plongeante sur la grande bleue et l'arrière-pays. Un terrain de jeu unique en France.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">04</span>
-          <h3>Voler toute l'année</h3>
-          <p>La Côte d'Azur, c'est plus de 300 jours de soleil par an : baptêmes et stages se déroulent toute l'année, dans des conditions idéales.</p>
-        </article>
-      </div>
-    </div>
+    <a class="hero__scroll" href="#stages" aria-label="Descendre"><span></span></a>
   </section>
 
   <!-- ============ STAGES & FORMULES (cards media-overlay) ============ -->
@@ -227,12 +194,12 @@
         <h2 class="section__title">Là-haut, ça ressemble à ça.</h2>
       </div>
       <div class="gallery" id="gallery">
-        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Village perché de Gourdon sur la Côte d'Azur" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Parapente au-dessus de la Côte d'Azur" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Vol biplace face à la mer" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Décollage en parapente à Gourdon" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Panorama mer et montagnes en parapente" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Parapente sur les crêtes de Caussols" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Parapente à Gourdon (Côte d'Azur)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Parapente à Gourdon (Côte d'Azur)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Parapente à Gourdon (Côte d'Azur)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Parapente à Gourdon (Côte d'Azur)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Parapente à Gourdon (Côte d'Azur)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Parapente à Gourdon (Côte d'Azur)" loading="lazy" width="1000" height="750"></button>
       </div>
     </div>
   </section>
@@ -359,7 +326,7 @@
       <span class="footer__credit">Maquette réalisée par <a href="https://lgdlcs.github.io/alt-tab-studio/" target="_blank" rel="noopener">alt-tab studio</a></span>
     </div>
   </footer>
-  </div><!-- /[data-scroll-container] -->
+  </div>
 
   <!-- Bouton de contact flottant. PAR DÉFAUT : WhatsApp. Si le prospect N'A PAS de WhatsApp,
        supprime ce bloc et décommente la « variante appel » juste en dessous. -->

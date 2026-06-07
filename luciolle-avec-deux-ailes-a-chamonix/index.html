@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="forest">
+<html lang="fr" data-theme="sky">
 <head>
   <meta name="robots" content="noindex,nofollow">
   <meta charset="UTF-8">
@@ -25,10 +25,6 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Locomotive Scroll (défilement fluide + parallaxe). Désactivé si prefers-reduced-motion. -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
-
   
   <script type="application/ld+json">
   {
@@ -40,8 +36,15 @@
     "image": "https://lgdlcs.github.io/parapente-maquettes/luciolle-avec-deux-ailes-a-chamonix/images/hero.jpg",
     "telephone": "06 87 98 55 05",
     "email": "minat33@gmail.com",
+    "priceRange": "90–170 €",
     "address": { "@type": "PostalAddress", "addressLocality": "Chamonix", "addressRegion": "Mont-Blanc", "addressCountry": "FR" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5,0", "reviewCount": "40" }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5,0", "reviewCount": "40" },
+    "sameAs": ["https://www.google.com/maps/search/?api=1&query=Luciolle+parapente+Chamonix", "https://www.google.com/maps/search/?api=1&query=Luciolle+parapente+Chamonix", "https://www.google.com/maps/search/?api=1&query=Luciolle+parapente+Chamonix"],
+    "makesOffer": [
+      { "@type": "Offer", "name": "Vol Découverte", "price": "90", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Vol Panoramique", "price": "130", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Vol Prestige", "price": "170", "priceCurrency": "EUR" }
+    ]
   }
   </script>
 
@@ -80,9 +83,7 @@
     </div>
   </header>
 
-  <!-- Conteneur Locomotive : la navbar, le WhatsApp flottant et la lightbox restent HORS du conteneur
-       (sinon le position:fixed casse sous la transformation de Locomotive). -->
-  <div data-scroll-container>
+  <div>
   <main id="main">
 
   <!-- ============ HERO VIDÉO ============ -->
@@ -93,7 +94,7 @@
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__bars" aria-hidden="true"></div>
-    <div class="wrap hero__content" data-scroll data-scroll-speed="1.6">
+    <div class="wrap hero__content">
       <p class="eyebrow eyebrow--light" data-reveal>Chamonix · Mont-Blanc</p>
       <h1 class="hero__title" data-reveal>Volez comme un oiseau, face au Mont-Blanc.</h1>
       <p class="hero__sub" data-reveal>Vols biplace en parapente au cœur de la vallée emblématique de Chamonix-Mont-Blanc, accompagné par un pilote professionnel. Réalisez votre rêve de voler, en toute sérénité, dans l'un des plus beaux décors des Alpes.</p>
@@ -102,41 +103,7 @@
         <a class="btn btn--ghost btn--lg" href="#stages">Voir les vols</a>
       </div>
     </div>
-    <a class="hero__scroll" href="#intro" aria-label="Descendre"><span></span></a>
-  </section>
-
-  <!-- ============ POURQUOI NOUS ============ -->
-  <section class="section" id="intro">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Pourquoi voler avec nous</p>
-        <h2 class="section__title">Votre rêve de voler, à Chamonix.</h2>
-        <p class="section__lead">À l'image de la luciole qui émet sa lumière pour communiquer dans l'obscurité, Luciolle met tout en œuvre pour vous accueillir dans les meilleures conditions et concrétiser votre rêve : voler comme un oiseau, face au Mont-Blanc.</p>
-      </div>
-
-      <div class="pillars">
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">01</span>
-          <h3>Pilote professionnel</h3>
-          <p>Un pilote expérimenté et passionné, à l'écoute, qui place votre sécurité et votre plaisir au cœur de chaque vol.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">02</span>
-          <h3>La vallée de Chamonix-Mont-Blanc</h3>
-          <p>L'un des plus beaux décors de vol au monde : aiguilles, glaciers et le toit des Alpes, le Mont-Blanc, sous vos pieds.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">03</span>
-          <h3>Des formules pour chaque envie</h3>
-          <p>Vol découverte, vol panoramique, vol prestige : plusieurs formules pour vivre le vol libre selon vos envies et votre niveau d'émotion.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">04</span>
-          <h3>Une structure indépendante</h3>
-          <p>Un accueil personnalisé et une vraie attention portée à chaque passager, loin des usines à baptêmes. Le vol, autrement.</p>
-        </article>
-      </div>
-    </div>
+    <a class="hero__scroll" href="#stages" aria-label="Descendre"><span></span></a>
   </section>
 
   <!-- ============ STAGES & FORMULES (cards media-overlay) ============ -->
@@ -227,12 +194,7 @@
         <h2 class="section__title">Là-haut, ça ressemble à ça.</h2>
       </div>
       <div class="gallery" id="gallery">
-        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Massif du Mont-Blanc depuis Chamonix" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Parapente face aux aiguilles de Chamonix" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Vol biplace au-dessus de la vallée de Chamonix" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Décollage en parapente à Chamonix" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Panorama sur les glaciers du Mont-Blanc" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Vol parapente au cœur des Alpes" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Parapente à Chamonix (Mont-Blanc)" loading="lazy" width="1000" height="750"></button>
       </div>
     </div>
   </section>
@@ -359,7 +321,7 @@
       <span class="footer__credit">Maquette réalisée par <a href="https://lgdlcs.github.io/alt-tab-studio/" target="_blank" rel="noopener">alt-tab studio</a></span>
     </div>
   </footer>
-  </div><!-- /[data-scroll-container] -->
+  </div>
 
   <!-- Bouton de contact flottant. PAR DÉFAUT : WhatsApp. Si le prospect N'A PAS de WhatsApp,
        supprime ce bloc et décommente la « variante appel » juste en dessous. -->

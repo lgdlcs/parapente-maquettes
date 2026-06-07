@@ -12,6 +12,41 @@
     if (src) src.addEventListener("error", function () { heroVideo.style.display = "none"; });
   }
 
+  /* ---------- Hero YouTube : lecture pilotée par l'API, révélée seulement quand ça joue ----------
+     Tant que la vidéo ne JOUE pas (chargement, titre/boutons, erreur d'embed), le wrapper reste
+     invisible → c'est le poster hero.jpg qui s'affiche. Aucune chrome YouTube visible. */
+  var ytMount = document.getElementById("heroYtMount");
+  var ytWrap = document.querySelector(".hero__video--yt");
+  if (ytWrap && reduceMotion) {
+    ytWrap.style.display = "none";              // mouvement réduit → poster
+  } else if (ytMount && ytWrap) {
+    var ytId = ytMount.getAttribute("data-yt-id");
+    window.onYouTubeIframeAPIReady = function () {
+      try {
+        new YT.Player("heroYtMount", {
+          videoId: ytId,
+          host: "https://www.youtube-nocookie.com",
+          playerVars: {
+            autoplay: 1, mute: 1, controls: 0, loop: 1, playlist: ytId,
+            modestbranding: 1, playsinline: 1, rel: 0, fs: 0, disablekb: 1,
+            iv_load_policy: 3, start: 0, origin: location.origin
+          },
+          events: {
+            onReady: function (e) { try { e.target.mute(); e.target.playVideo(); } catch (x) {} },
+            onStateChange: function (e) {
+              if (e.data === 1) ytWrap.classList.add("is-playing");            // PLAYING → révèle
+              else if (e.data === 0) { try { e.target.seekTo(0); e.target.playVideo(); } catch (x) {} } // ENDED → boucle
+            },
+            onError: function () { ytWrap.style.display = "none"; }            // non embeddable → poster
+          }
+        });
+      } catch (x) { ytWrap.style.display = "none"; }
+    };
+    var ytTag = document.createElement("script");
+    ytTag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(ytTag);
+  }
+
   /* ---------- Navbar : état au scroll (fonctionne en natif ET via Locomotive) ---------- */
   var nav = document.getElementById("nav");
   function setNav(y) { nav.classList.toggle("nav--scrolled", y > 40); }
@@ -167,36 +202,4 @@
     });
   }
 
-  /* ---------- Locomotive Scroll : défilement fluide + parallaxe du hero ----------
-     Chargé en defer → on initialise au load. Hors reduced-motion ; sur mobile/tablette
-     le smooth est désactivé (perf). Si le CDN échoue, on garde le scroll natif. */
-  function forceReveal() {
-    var h = window.innerHeight * 0.9;
-    Array.prototype.forEach.call(revealEls, function (el) {
-      if (!el.classList.contains("is-visible") && el.getBoundingClientRect().top < h) el.classList.add("is-visible");
-    });
-  }
-  function initLoco() {
-    if (reduceMotion || !window.LocomotiveScroll) return;
-    var el = document.querySelector("[data-scroll-container]");
-    if (!el) return;
-    try {
-      var scroll = new LocomotiveScroll({
-        el: el, smooth: true, lerp: 0.085, multiplier: 0.95,
-        smartphone: { smooth: false }, tablet: { smooth: false }
-      });
-      scroll.on("scroll", function (args) { setNav(args.scroll.y); forceReveal(); });
-      Array.prototype.forEach.call(document.querySelectorAll('a[href^="#"]'), function (a) {
-        a.addEventListener("click", function (e) {
-          var id = a.getAttribute("href");
-          if (id.length < 2) { e.preventDefault(); scroll.scrollTo(0); return; }
-          var t = document.querySelector(id);
-          if (t) { e.preventDefault(); scroll.scrollTo(t, { offset: -74 }); }
-        });
-      });
-      setTimeout(function () { scroll.update(); }, 600);
-    } catch (err) { /* fallback : scroll natif */ }
-  }
-  if (document.readyState === "complete") initLoco();
-  else window.addEventListener("load", initLoco);
 })();

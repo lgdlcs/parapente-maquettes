@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="night">
+<html lang="fr" data-theme="sky">
 <head>
   <meta name="robots" content="noindex,nofollow">
   <meta charset="UTF-8">
@@ -25,10 +25,6 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Locomotive Scroll (défilement fluide + parallaxe). Désactivé si prefers-reduced-motion. -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
-
   
   <script type="application/ld+json">
   {
@@ -40,8 +36,15 @@
     "image": "https://lgdlcs.github.io/parapente-maquettes/jennif-air/images/hero.jpg",
     "telephone": "06 07 80 19 69",
     "email": "jennifair05200@gmail.com",
+    "priceRange": "70–130 €",
     "address": { "@type": "PostalAddress", "addressLocality": "Embrun", "addressRegion": "Serre-Ponçon", "addressCountry": "FR" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4,7", "reviewCount": "80" }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4,7", "reviewCount": "80" },
+    "sameAs": ["https://www.google.com/maps/search/?api=1&query=Jennif'Air+parapente+Embrun", "https://www.facebook.com/Jennifair-Parapente-multi-activit%C3%A9s-a%C3%A9riennes-128674930543207/", "https://www.google.com/maps/search/?api=1&query=Jennif'Air+parapente+Embrun"],
+    "makesOffer": [
+      { "@type": "Offer", "name": "Vol Découverte", "price": "70", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Vol Sensation", "price": "90", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Vol Prestige", "price": "130", "priceCurrency": "EUR" }
+    ]
   }
   </script>
 
@@ -80,9 +83,7 @@
     </div>
   </header>
 
-  <!-- Conteneur Locomotive : la navbar, le WhatsApp flottant et la lightbox restent HORS du conteneur
-       (sinon le position:fixed casse sous la transformation de Locomotive). -->
-  <div data-scroll-container>
+  <div>
   <main id="main">
 
   <!-- ============ HERO VIDÉO ============ -->
@@ -93,7 +94,7 @@
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__bars" aria-hidden="true"></div>
-    <div class="wrap hero__content" data-scroll data-scroll-speed="1.6">
+    <div class="wrap hero__content">
       <p class="eyebrow eyebrow--light" data-reveal>Embrun · Serre-Ponçon</p>
       <h1 class="hero__title" data-reveal>Le vol libre au-dessus du lac de Serre-Ponçon.</h1>
       <p class="hero__sub" data-reveal>Depuis 1994, Jennif'Air vous fait découvrir le ciel des Hautes-Alpes : parapente et multi-activités aériennes autour du lac de Serre-Ponçon. Baptêmes, stages et sensations, encadrés par des professionnels passionnés.</p>
@@ -102,41 +103,7 @@
         <a class="btn btn--ghost btn--lg" href="#stages">Voir les activités</a>
       </div>
     </div>
-    <a class="hero__scroll" href="#intro" aria-label="Descendre"><span></span></a>
-  </section>
-
-  <!-- ============ POURQUOI NOUS ============ -->
-  <section class="section" id="intro">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Pourquoi voler avec nous</p>
-        <h2 class="section__title">30 ans de passion du ciel.</h2>
-        <p class="section__lead">Depuis 1994, Jennif'Air partage la passion du vol libre autour du lac de Serre-Ponçon. Du baptême en parapente aux activités aériennes les plus variées, nous vous accueillons dans l'un des plus beaux sites des Hautes-Alpes.</p>
-      </div>
-
-      <div class="pillars">
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">01</span>
-          <h3>Professionnels passionnés</h3>
-          <p>Une équipe expérimentée et diplômée, présente depuis 30 ans, qui place votre sécurité et votre plaisir avant tout.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">02</span>
-          <h3>Le lac de Serre-Ponçon</h3>
-          <p>L'un des plus grands lacs des Alpes, ses eaux turquoise et les sommets des Hautes-Alpes : un décor exceptionnel pour découvrir le vol libre.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">03</span>
-          <h3>Multi-activités aériennes</h3>
-          <p>Parapente, montgolfière, planeur, ULM, hélicoptère… Une palette d'activités aériennes unique pour vivre le ciel sous toutes ses formes.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">04</span>
-          <h3>Du baptême à l'autonomie</h3>
-          <p>Vols découverte, forfaits biplace et stages d'initiation : un parcours pour chaque envie, du simple plaisir au pilotage en autonomie.</p>
-        </article>
-      </div>
-    </div>
+    <a class="hero__scroll" href="#stages" aria-label="Descendre"><span></span></a>
   </section>
 
   <!-- ============ STAGES & FORMULES (cards media-overlay) ============ -->
@@ -227,12 +194,12 @@
         <h2 class="section__title">Là-haut, ça ressemble à ça.</h2>
       </div>
       <div class="gallery" id="gallery">
-        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Vol au-dessus du lac de Serre-Ponçon" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Parapente dans les Hautes-Alpes" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Activité aérienne à Serre-Ponçon" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Décollage en parapente à Embrun" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Panorama sur le lac de Serre-Ponçon" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Vol libre au cœur des Hautes-Alpes" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Parapente à Embrun (Serre-Ponçon)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Parapente à Embrun (Serre-Ponçon)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Parapente à Embrun (Serre-Ponçon)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Parapente à Embrun (Serre-Ponçon)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Parapente à Embrun (Serre-Ponçon)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Parapente à Embrun (Serre-Ponçon)" loading="lazy" width="1000" height="750"></button>
       </div>
     </div>
   </section>
@@ -359,7 +326,7 @@
       <span class="footer__credit">Maquette réalisée par <a href="https://lgdlcs.github.io/alt-tab-studio/" target="_blank" rel="noopener">alt-tab studio</a></span>
     </div>
   </footer>
-  </div><!-- /[data-scroll-container] -->
+  </div>
 
   <!-- Bouton de contact flottant. PAR DÉFAUT : WhatsApp. Si le prospect N'A PAS de WhatsApp,
        supprime ce bloc et décommente la « variante appel » juste en dessous. -->

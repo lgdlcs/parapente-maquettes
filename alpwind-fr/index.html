@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="night">
+<html lang="fr" data-theme="sky">
 <head>
   <meta name="robots" content="noindex,nofollow">
   <meta charset="UTF-8">
@@ -25,10 +25,6 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Locomotive Scroll (défilement fluide + parallaxe). Désactivé si prefers-reduced-motion. -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
-
   
   <script type="application/ld+json">
   {
@@ -40,8 +36,15 @@
     "image": "https://lgdlcs.github.io/parapente-maquettes/alpwind-fr/images/hero.jpg",
     "telephone": "06 70 06 91 43",
     "email": "info@alpwind.fr",
+    "priceRange": "110–260 €",
     "address": { "@type": "PostalAddress", "addressLocality": "Chamonix", "addressRegion": "Mont-Blanc", "addressCountry": "FR" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4,9", "reviewCount": "70" }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4,9", "reviewCount": "70" },
+    "sameAs": ["https://www.instagram.com/alpwind.parapente/", "https://www.facebook.com/AlpWind.parapente/", "https://www.google.com/maps/search/?api=1&query=AlpWind+parapente+Chamonix"],
+    "makesOffer": [
+      { "@type": "Offer", "name": "Baptême Planpraz", "price": "110", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Plan de l'Aiguille", "price": "140", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Aiguille du Midi", "price": "260", "priceCurrency": "EUR" }
+    ]
   }
   </script>
 
@@ -80,9 +83,7 @@
     </div>
   </header>
 
-  <!-- Conteneur Locomotive : la navbar, le WhatsApp flottant et la lightbox restent HORS du conteneur
-       (sinon le position:fixed casse sous la transformation de Locomotive). -->
-  <div data-scroll-container>
+  <div>
   <main id="main">
 
   <!-- ============ HERO VIDÉO ============ -->
@@ -93,7 +94,7 @@
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__bars" aria-hidden="true"></div>
-    <div class="wrap hero__content" data-scroll data-scroll-speed="1.6">
+    <div class="wrap hero__content">
       <p class="eyebrow eyebrow--light" data-reveal>Chamonix · Mont-Blanc</p>
       <h1 class="hero__title" data-reveal>Le parapente de montagne, à Chamonix et Annecy.</h1>
       <p class="hero__sub" data-reveal>École de parapente spécialiste du vol en altitude et du vol montagne. Baptêmes face au Mont-Blanc, stages de progression, cross et hike & fly — encadrés par des moniteurs passionnés, pour voler plus haut, plus loin, en toute confiance.</p>
@@ -102,41 +103,7 @@
         <a class="btn btn--ghost btn--lg" href="#stages">Voir les stages</a>
       </div>
     </div>
-    <a class="hero__scroll" href="#intro" aria-label="Descendre"><span></span></a>
-  </section>
-
-  <!-- ============ POURQUOI NOUS ============ -->
-  <section class="section" id="intro">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Pourquoi voler avec nous</p>
-        <h2 class="section__title">Voler plus haut, plus loin, en confiance.</h2>
-        <p class="section__lead">Entre Chamonix et Annecy, deux grands sites du vol libre, AlpWind est spécialiste du parapente en altitude et du vol montagne. Du baptême face au Mont-Blanc au stage de cross, nous vous accompagnons à chaque étape de votre progression.</p>
-      </div>
-
-      <div class="pillars">
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">01</span>
-          <h3>Spécialistes du vol montagne</h3>
-          <p>Vol en altitude, monosurface, cross, vol-bivouac : une expertise pointue du parapente alpin, rare, au service de votre progression et de votre sécurité.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">02</span>
-          <h3>Face au Mont-Blanc</h3>
-          <p>Planpraz, Plan de l'Aiguille, Aiguille du Midi… Décollez sur les sites les plus mythiques des Alpes, entre glaciers, aiguilles et grands espaces.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">03</span>
-          <h3>Du baptême au cross longue distance</h3>
-          <p>Baptêmes, stages d'initiation et de perfectionnement, premiers cross, hike & fly : un parcours complet pour chaque niveau, des débutants aux pilotes confirmés.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">04</span>
-          <h3>Une vraie aventure parapente</h3>
-          <p>Hike & fly, vol-bivouac et voyages (Dolomites, Andalousie, Autriche) : bien plus que des vols, une approche de la montagne et de la légèreté.</p>
-        </article>
-      </div>
-    </div>
+    <a class="hero__scroll" href="#stages" aria-label="Descendre"><span></span></a>
   </section>
 
   <!-- ============ STAGES & FORMULES (cards media-overlay) ============ -->
@@ -227,12 +194,12 @@
         <h2 class="section__title">Là-haut, ça ressemble à ça.</h2>
       </div>
       <div class="gallery" id="gallery">
-        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Baptême en parapente biplace à Chamonix" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Vol montagne face au Mont-Blanc" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Hike & fly dans le massif du Mont-Blanc" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Panorama alpin en parapente" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Stage de parapente en altitude" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Voyage parapente avec AlpWind" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Parapente à Chamonix (Mont-Blanc)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Parapente à Chamonix (Mont-Blanc)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Parapente à Chamonix (Mont-Blanc)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Parapente à Chamonix (Mont-Blanc)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Parapente à Chamonix (Mont-Blanc)" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Parapente à Chamonix (Mont-Blanc)" loading="lazy" width="1000" height="750"></button>
       </div>
     </div>
   </section>
@@ -359,7 +326,7 @@
       <span class="footer__credit">Maquette réalisée par <a href="https://lgdlcs.github.io/alt-tab-studio/" target="_blank" rel="noopener">alt-tab studio</a></span>
     </div>
   </footer>
-  </div><!-- /[data-scroll-container] -->
+  </div>
 
   <!-- Bouton de contact flottant. PAR DÉFAUT : WhatsApp. Si le prospect N'A PAS de WhatsApp,
        supprime ce bloc et décommente la « variante appel » juste en dessous. -->
