@@ -12,10 +12,39 @@
     if (src) src.addEventListener("error", function () { heroVideo.style.display = "none"; });
   }
 
-  /* ---------- Hero YouTube (si le prospect a une vidéo YouTube) : poster si mouvement réduit ---------- */
-  if (reduceMotion) {
-    var heroYt = document.querySelector(".hero__video--yt");
-    if (heroYt) heroYt.style.display = "none";
+  /* ---------- Hero YouTube : lecture pilotée par l'API, révélée seulement quand ça joue ----------
+     Tant que la vidéo ne JOUE pas (chargement, titre/boutons, erreur d'embed), le wrapper reste
+     invisible → c'est le poster hero.jpg qui s'affiche. Aucune chrome YouTube visible. */
+  var ytMount = document.getElementById("heroYtMount");
+  var ytWrap = document.querySelector(".hero__video--yt");
+  if (ytWrap && reduceMotion) {
+    ytWrap.style.display = "none";              // mouvement réduit → poster
+  } else if (ytMount && ytWrap) {
+    var ytId = ytMount.getAttribute("data-yt-id");
+    window.onYouTubeIframeAPIReady = function () {
+      try {
+        new YT.Player("heroYtMount", {
+          videoId: ytId,
+          host: "https://www.youtube-nocookie.com",
+          playerVars: {
+            autoplay: 1, mute: 1, controls: 0, loop: 1, playlist: ytId,
+            modestbranding: 1, playsinline: 1, rel: 0, fs: 0, disablekb: 1,
+            iv_load_policy: 3, start: 0, origin: location.origin
+          },
+          events: {
+            onReady: function (e) { try { e.target.mute(); e.target.playVideo(); } catch (x) {} },
+            onStateChange: function (e) {
+              if (e.data === 1) ytWrap.classList.add("is-playing");            // PLAYING → révèle
+              else if (e.data === 0) { try { e.target.seekTo(0); e.target.playVideo(); } catch (x) {} } // ENDED → boucle
+            },
+            onError: function () { ytWrap.style.display = "none"; }            // non embeddable → poster
+          }
+        });
+      } catch (x) { ytWrap.style.display = "none"; }
+    };
+    var ytTag = document.createElement("script");
+    ytTag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(ytTag);
   }
 
   /* ---------- Navbar : état au scroll (fonctionne en natif ET via Locomotive) ---------- */

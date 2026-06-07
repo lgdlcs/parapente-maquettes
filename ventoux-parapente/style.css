@@ -139,11 +139,14 @@ h1,h2,h3 { font-family:var(--font-display); font-weight:700; line-height:1.04; l
   animation:heroFade 1.6s var(--ease) both, heroKen 26s ease-in-out infinite alternate; }
 @keyframes heroFade { from{opacity:0;} to{opacity:1;} }
 @keyframes heroKen { from{transform:scale(1.05) translateZ(0);} to{transform:scale(1.13) translateY(-2%) translateZ(0);} }
-/* Hero YouTube : iframe mise à l'échelle pour couvrir le viewport (16:9), sans interaction */
+/* Hero YouTube : révélée seulement quand la vidéo joue (.is-playing) → sinon poster hero.jpg.
+   overscan (scale 1.35) = rejette le titre/chrome YouTube hors du cadre ; pointer-events:none. */
 .hero__video--yt { position:absolute; inset:0; z-index:-2; overflow:hidden; pointer-events:none;
-  animation:heroFade 1.6s var(--ease) both; }
-.hero__video--yt iframe { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  width:100vw; height:56.25vw; min-width:177.78vh; min-height:100vh; border:0; }
+  opacity:0; transition:opacity 1s var(--ease); }
+.hero__video--yt.is-playing { opacity:1; }
+.hero__video--yt iframe { position:absolute; top:50%; left:50%;
+  width:100vw; height:56.25vw; min-width:177.78vh; min-height:100vh; border:0; pointer-events:none;
+  transform:translate(-50%,-50%) scale(1.35); transform-origin:center; }
 .hero__overlay {
   position:absolute; inset:0; z-index:-1;
   background:radial-gradient(120% 90% at 50% 40%, rgba(8,12,18,.30) 0%, rgba(8,12,18,.55) 55%, rgba(8,12,18,.82) 100%);
