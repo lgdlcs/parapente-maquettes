@@ -25,10 +25,6 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Locomotive Scroll (défilement fluide + parallaxe). Désactivé si prefers-reduced-motion. -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
-
   
   <script type="application/ld+json">
   {
@@ -49,6 +45,7 @@
   <script data-goatcounter="https://legrand.goatcounter.com/count"
           data-goatcounter-settings='{"path":"/ventoux-parapente"}'
           async src="//gc.zgo.at/count.js"></script>
+  <style id="brand">:root[data-theme="slate"]{--primary:#48307b;--accent:#d26e4b;--accent-ink:#ffffff;--canvas:#efeceb;--surface:#ffffff;--surface-alt:#e2dedc;--ink:#1e1e2e;--muted:#83838c;--line:#d3cdcc;}</style>
 </head>
 <body id="top">
 
@@ -80,20 +77,16 @@
     </div>
   </header>
 
-  <!-- Conteneur Locomotive : la navbar, le WhatsApp flottant et la lightbox restent HORS du conteneur
-       (sinon le position:fixed casse sous la transformation de Locomotive). -->
-  <div data-scroll-container>
+  <div>
   <main id="main">
 
   <!-- ============ HERO VIDÉO ============ -->
   <section class="hero" id="hero">
     
-    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline poster="images/hero.jpg" aria-hidden="true">
-      <source src="https://cdn.pixabay.com/video/2022/11/11/138614-770315545_medium.mp4" type="video/mp4">
-    </video>
+    <div class="hero__video--yt" aria-hidden="true"><iframe src="https://www.youtube-nocookie.com/embed/ZebhMklr0sM?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=ZebhMklr0sM&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3" title="" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
     <div class="hero__overlay"></div>
     <div class="hero__bars" aria-hidden="true"></div>
-    <div class="wrap hero__content" data-scroll data-scroll-speed="1.6">
+    <div class="wrap hero__content">
       <p class="eyebrow eyebrow--light" data-reveal>Sault · Vaucluse</p>
       <h1 class="hero__title" data-reveal>Volez au-dessus du Mont Ventoux et des champs de lavande.</h1>
       <p class="hero__sub" data-reveal>Baptêmes en biplace et stages tous niveaux au cœur du Pays de Sault, en Provence. Encadrés par des moniteurs diplômés d'État, pour découvrir le vol libre face au Géant de Provence en toute sécurité.</p>
@@ -102,41 +95,7 @@
         <a class="btn btn--ghost btn--lg" href="#stages">Voir les stages</a>
       </div>
     </div>
-    <a class="hero__scroll" href="#intro" aria-label="Descendre"><span></span></a>
-  </section>
-
-  <!-- ============ POURQUOI NOUS ============ -->
-  <section class="section" id="intro">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Pourquoi voler avec nous</p>
-        <h2 class="section__title">Le vol libre, en Provence, en toute confiance.</h2>
-        <p class="section__lead">Au Pays de Sault, à quelques pas du Mont Ventoux, nous partageons notre passion du vol libre depuis des années. Du premier baptême au pilotage autonome, notre équipe de moniteurs vous accompagne dans un cadre provençal d'exception.</p>
-      </div>
-
-      <div class="pillars">
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">01</span>
-          <h3>Moniteurs diplômés d'État</h3>
-          <p>Une équipe brevetée et passionnée — Nicolas, Élie et toute l'école — qui place votre sécurité et votre plaisir avant tout, dans une pédagogie patiente et individualisée.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">02</span>
-          <h3>Le Géant de Provence sous vos pieds</h3>
-          <p>Décollages face au Mont Ventoux, à la Vallée de Sault et aux champs de lavande. L'un des plus beaux terrains de vol de Provence, du baptême tranquille au grand vol.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">03</span>
-          <h3>Du baptême à l'autonomie</h3>
-          <p>Vols découverte, vols enfants, stages d'initiation, de progression et de perfectionnement : un parcours pour chaque envie et chaque niveau, d'avril à octobre.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <span class="pillar__num">04</span>
-          <h3>Une passion qui se partage</h3>
-          <p>Matériel récent et vérifié, accueil chaleureux, et l'envie sincère de vous transmettre le goût du vol. Beaucoup repartent avec une seule idée : recommencer.</p>
-        </article>
-      </div>
-    </div>
+    <a class="hero__scroll" href="#stages" aria-label="Descendre"><span></span></a>
   </section>
 
   <!-- ============ STAGES & FORMULES (cards media-overlay) ============ -->
@@ -228,11 +187,17 @@
       </div>
       <div class="gallery" id="gallery">
         <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Parapente au-dessus du Mont Ventoux" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Vol biplace face au Géant de Provence" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Parapente au-dessus de la Vallée de Sault" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Décollage en parapente au Pays de la lavande" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Vol découverte au Mont Ventoux" loading="lazy" width="1000" height="750"></button>
-        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Panorama provençal en parapente" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Vol biplace dans le ciel de Provence" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Décollage face au Géant de Provence" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Parapente au-dessus du Pays de Sault" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Voiles de parapente dans les champs provençaux" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Baptême en parapente au Mont Ventoux" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-7.jpg" alt="Survol des paysages du Vaucluse en parapente" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-8.jpg" alt="Vol libre au-dessus de la vallée de Sault" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-9.jpg" alt="Parapente au coucher du soleil sur le Ventoux" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-10.jpg" alt="Vol panoramique au Mont Ventoux" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-11.jpg" alt="Sensations de vol au-dessus de la Provence" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-12.jpg" alt="Parapente biplace au Pays de Sault" loading="lazy" width="1000" height="750"></button>
       </div>
     </div>
   </section>
@@ -359,7 +324,7 @@
       <span class="footer__credit">Maquette réalisée par <a href="https://lgdlcs.github.io/alt-tab-studio/" target="_blank" rel="noopener">alt-tab studio</a></span>
     </div>
   </footer>
-  </div><!-- /[data-scroll-container] -->
+  </div>
 
   <!-- Bouton de contact flottant. PAR DÉFAUT : WhatsApp. Si le prospect N'A PAS de WhatsApp,
        supprime ce bloc et décommente la « variante appel » juste en dessous. -->
