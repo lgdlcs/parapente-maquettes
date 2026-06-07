@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="forest">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luciolle — Parapente biplace à Chamonix · Vols face au Mont-Blanc</title>
+  <meta name="description" content="Luciolle : vols biplace en parapente à Chamonix-Mont-Blanc, avec un pilote professionnel. Baptêmes et vols panoramiques face au massif du Mont-Blanc. Réservez votre vol.">
+  <link rel="canonical" href="https://lgdlcs.github.io/parapente-maquettes/luciolle-avec-deux-ailes-a-chamonix">
+
+  <!-- Open Graph / partage -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Luciolle — Parapente biplace à Chamonix">
+  <meta property="og:description" content="Vols biplace en parapente face au Mont-Blanc, avec un pilote professionnel, à Chamonix.">
+  <meta property="og:image" content="https://lgdlcs.github.io/parapente-maquettes/luciolle-avec-deux-ailes-a-chamonix/images/hero.jpg">
+  <meta property="og:url" content="https://lgdlcs.github.io/parapente-maquettes/luciolle-avec-deux-ailes-a-chamonix">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Version « Cinéma » : hero vidéo plein écran · Bricolage Grotesque (titres) + Hanken Grotesk (corps) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Locomotive Scroll (défilement fluide + parallaxe). Désactivé si prefers-reduced-motion. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Luciolle",
+    "description": "Vols biplace en parapente à Chamonix-Mont-Blanc, accompagnés par un pilote professionnel.",
+    "url": "https://lgdlcs.github.io/parapente-maquettes/luciolle-avec-deux-ailes-a-chamonix",
+    "image": "https://lgdlcs.github.io/parapente-maquettes/luciolle-avec-deux-ailes-a-chamonix/images/hero.jpg",
+    "telephone": "06 87 98 55 05",
+    "email": "minat33@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Chamonix", "addressRegion": "Mont-Blanc", "addressCountry": "FR" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5,0", "reviewCount": "40" }
+  }
+  </script>
+
+  
+  <script data-goatcounter="https://legrand.goatcounter.com/count"
+          data-goatcounter-settings='{"path":"/luciolle"}'
+          async src="//gc.zgo.at/count.js"></script>
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ============ NAVBAR (liens centrés) ============ -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="Luciolle — accueil">
+        
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 28" width="34" height="24"><path d="M3,15 Q12,3 20,5 Q28,3 37,15 Q20,21 3,15 Z" fill="currentColor"/><line x1="7" y1="15" x2="19" y2="26" stroke="currentColor" stroke-width="1.3"/><line x1="20" y1="6" x2="20" y2="26" stroke="currentColor" stroke-width="1.3"/><line x1="33" y1="15" x2="21" y2="26" stroke="currentColor" stroke-width="1.3"/></svg>
+        </span>
+        <span class="brand__name">Luciolle</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
+        <a href="#stages">Vols</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn--accent nav__cta" href="#contact" data-prefill="Bonjour, je souhaite réserver un vol biplace en parapente à Chamonix.">Réserver</a>
+      </nav>
+
+      <button class="nav__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Conteneur Locomotive : la navbar, le WhatsApp flottant et la lightbox restent HORS du conteneur
+       (sinon le position:fixed casse sous la transformation de Locomotive). -->
+  <div data-scroll-container>
+  <main id="main">
+
+  <!-- ============ HERO VIDÉO ============ -->
+  <section class="hero" id="hero">
+    
+    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline poster="images/hero.jpg" aria-hidden="true">
+      <source src="https://cdn.pixabay.com/video/2022/11/11/138614-770315545_medium.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__bars" aria-hidden="true"></div>
+    <div class="wrap hero__content" data-scroll data-scroll-speed="1.6">
+      <p class="eyebrow eyebrow--light" data-reveal>Chamonix · Mont-Blanc</p>
+      <h1 class="hero__title" data-reveal>Volez comme un oiseau, face au Mont-Blanc.</h1>
+      <p class="hero__sub" data-reveal>Vols biplace en parapente au cœur de la vallée emblématique de Chamonix-Mont-Blanc, accompagné par un pilote professionnel. Réalisez votre rêve de voler, en toute sérénité, dans l'un des plus beaux décors des Alpes.</p>
+      <div class="hero__cta" data-reveal>
+        <a class="btn btn--accent btn--lg" href="#contact" data-prefill="Bonjour, je souhaite réserver un vol biplace en parapente à Chamonix.">Réserver un vol</a>
+        <a class="btn btn--ghost btn--lg" href="#stages">Voir les vols</a>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#intro" aria-label="Descendre"><span></span></a>
+  </section>
+
+  <!-- ============ POURQUOI NOUS ============ -->
+  <section class="section" id="intro">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Pourquoi voler avec nous</p>
+        <h2 class="section__title">Votre rêve de voler, à Chamonix.</h2>
+        <p class="section__lead">À l'image de la luciole qui émet sa lumière pour communiquer dans l'obscurité, Luciolle met tout en œuvre pour vous accueillir dans les meilleures conditions et concrétiser votre rêve : voler comme un oiseau, face au Mont-Blanc.</p>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">01</span>
+          <h3>Pilote professionnel</h3>
+          <p>Un pilote expérimenté et passionné, à l'écoute, qui place votre sécurité et votre plaisir au cœur de chaque vol.</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">02</span>
+          <h3>La vallée de Chamonix-Mont-Blanc</h3>
+          <p>L'un des plus beaux décors de vol au monde : aiguilles, glaciers et le toit des Alpes, le Mont-Blanc, sous vos pieds.</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">03</span>
+          <h3>Des formules pour chaque envie</h3>
+          <p>Vol découverte, vol panoramique, vol prestige : plusieurs formules pour vivre le vol libre selon vos envies et votre niveau d'émotion.</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">04</span>
+          <h3>Une structure indépendante</h3>
+          <p>Un accueil personnalisé et une vraie attention portée à chaque passager, loin des usines à baptêmes. Le vol, autrement.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STAGES & FORMULES (cards media-overlay) ============ -->
+  <section class="section section--alt" id="stages">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Nos expériences</p>
+        <h2 class="section__title">Choisissez votre vol.</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card" data-reveal>
+          <img class="card__img" src="images/stage-1.jpg" alt="Vol découverte" loading="lazy" width="1000" height="750">
+          <div class="card__overlay">
+            <p class="card__tag">Découverte · tous publics</p>
+            <h3>Vol découverte</h3>
+            <p class="card__desc">Votre premier vol en biplace, accompagné d'un pilote professionnel. Rien à apprendre, juste à savourer le décollage et le panorama sur la vallée.</p>
+            <a class="link-arrow" href="#tarifs">Voir les formules <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <img class="card__img" src="images/stage-2.jpg" alt="Vol panoramique" loading="lazy" width="1000" height="750">
+          <div class="card__overlay">
+            <p class="card__tag">Panoramique · Mont-Blanc</p>
+            <h3>Vol panoramique</h3>
+            <p class="card__desc">Prenez de l'altitude pour un grand vol face aux aiguilles et aux glaciers du massif du Mont-Blanc. Le cœur de Chamonix, vu du ciel.</p>
+            <a class="link-arrow" href="#contact" data-prefill="Bonjour, je souhaite réserver le vol panoramique face au Mont-Blanc.">Demander les dates <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <img class="card__img" src="images/stage-3.jpg" alt="Vol hélicoptère" loading="lazy" width="1000" height="750">
+          <div class="card__overlay">
+            <p class="card__tag">Sur-mesure · hélicoptère</p>
+            <h3>Vol hélicoptère</h3>
+            <p class="card__desc">Envie d'une expérience unique ? Découvrez aussi le massif du Mont-Blanc en hélicoptère, pour un souvenir hors du commun.</p>
+            <a class="link-arrow" href="#contact" data-prefill="Bonjour, je souhaite des informations sur le vol en hélicoptère.">Demander les dates <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TARIFS ============ -->
+  <section class="section" id="tarifs">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Vols biplace</p>
+        <h2 class="section__title">Des formules pour tous les envols.</h2>
+        <p class="section__lead">Tarifs indicatifs 2026 (à confirmer) · vols au départ de la vallée de Chamonix.</p>
+      </div>
+
+      <div class="pricing">
+        <article class="price" data-reveal>
+          <h3 class="price__name">Vol Découverte</h3>
+          <p class="price__amount">90<span>€</span></p>
+          <p class="price__desc">Le baptême idéal pour une première fois : un vol tout en douceur pour goûter au plaisir du vol libre dans la vallée de Chamonix.</p>
+          <ul class="price__list"><li>Vol découverte en biplace</li><li>Pilote professionnel</li><li>Briefing & équipement fournis</li></ul>
+          <a class="btn btn--outline" href="#contact" data-prefill="Bonjour, je souhaite réserver la formule Vol Découverte (90 €).">Réserver</a>
+        </article>
+
+        <article class="price price--featured" data-reveal>
+          <span class="price__badge">Le plus choisi</span>
+          <h3 class="price__name">Vol Panoramique</h3>
+          <p class="price__amount">130<span>€</span></p>
+          <p class="price__desc">Notre vol signature : décollage en altitude, survol des aiguilles et des glaciers, face au massif du Mont-Blanc.</p>
+          <ul class="price__list"><li>Vol prolongé en altitude</li><li>Vue aiguilles & glaciers</li><li>Face au Mont-Blanc</li></ul>
+          <a class="btn btn--accent" href="#contact" data-prefill="Bonjour, je souhaite réserver la formule Vol Panoramique (130 €).">Réserver</a>
+        </article>
+
+        <article class="price" data-reveal>
+          <h3 class="price__name">Vol Prestige</h3>
+          <p class="price__amount">170<span>€</span></p>
+          <p class="price__desc">Le vol le plus long : prenez le temps de savourer chaque instant au-dessus de la plus belle vallée des Alpes.</p>
+          <ul class="price__list"><li>Vol longue durée</li><li>Le grand tour du massif</li><li>Photos/vidéo du vol disponibles</li></ul>
+          <a class="btn btn--outline" href="#contact" data-prefill="Bonjour, je souhaite réserver la formule Vol Prestige (170 €).">Réserver</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIE ============ -->
+  <section class="section section--alt" id="galerie">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">En images</p>
+        <h2 class="section__title">Là-haut, ça ressemble à ça.</h2>
+      </div>
+      <div class="gallery" id="gallery">
+        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Massif du Mont-Blanc depuis Chamonix" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Parapente face aux aiguilles de Chamonix" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Vol biplace au-dessus de la vallée de Chamonix" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Décollage en parapente à Chamonix" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Panorama sur les glaciers du Mont-Blanc" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Vol parapente au cœur des Alpes" loading="lazy" width="1000" height="750"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AVIS GOOGLE (carrousel) ============ -->
+  <section class="section" id="avis">
+    <div class="wrap">
+      <div class="reviews__head" data-reveal>
+        <div>
+          <p class="eyebrow">Ils ont volé avec nous</p>
+          <h2 class="section__title">Ce que disent nos passagers.</h2>
+        </div>
+        <a class="reviews__badge" href="https://www.google.com/maps/search/?api=1&query=Luciolle+parapente+Chamonix" target="_blank" rel="noopener">
+          <span class="reviews__stars" aria-hidden="true">★★★★★</span>
+          <span class="reviews__score">5,0</span>
+          <span class="reviews__count">40 avis Google</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="reviews" id="reviews">
+      <div class="reviews__track" id="reviewsTrack">
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#E5734B">C</span><figcaption><span class="review__name">Camille D.</span><span class="review__date">il y a 2 semaines</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Vol incroyable face au Mont-Blanc ! Pilote rassurant et passionné, on se sent en confiance immédiatement. Un souvenir gravé à jamais. Merci !</blockquote>
+        </figure>
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#4F7CAC">T</span><figcaption><span class="review__name">Thomas L.</span><span class="review__date">il y a 1 mois</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Premier vol pour mon anniversaire, un cadeau parfait. Décollage tout en douceur, vue irréelle sur les glaciers. Accueil au top, loin des usines à baptêmes.</blockquote>
+        </figure>
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#5FA17D">S</span><figcaption><span class="review__name">Sophie M.</span><span class="review__date">il y a 1 mois</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Une expérience humaine autant que sportive. Le pilote prend le temps, explique tout, on profite à fond. La vallée de Chamonix vue du ciel, c'est magique.</blockquote>
+        </figure>
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#B07BB0">J</span><figcaption><span class="review__name">Julien R.</span><span class="review__date">il y a 2 mois</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Vol panoramique inoubliable face aux aiguilles. Les photos sont superbes. Une structure à taille humaine, on se sent vraiment bien accueilli.</blockquote>
+        </figure>
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#C9912E">L</span><figcaption><span class="review__name">Laëtitia B.</span><span class="review__date">il y a 3 mois</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>J'avais le vertige, le pilote m'a tout de suite mise en confiance. Au final, je n'avais qu'une envie : recommencer. Un immense merci.</blockquote>
+        </figure>
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#3FA0A8">M</span><figcaption><span class="review__name">Marc V.</span><span class="review__date">il y a 3 mois</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Accueil chaleureux et personnalisé, et quel panorama sur le Mont-Blanc ! Le bon cadeau a fait un carton. Vraiment au top, je recommande.</blockquote>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BON CADEAU ============ -->
+  <section class="gift" id="cadeau">
+    <div class="wrap gift__inner" data-reveal>
+      <div>
+        <p class="eyebrow eyebrow--light">Une idée cadeau qui décolle</p>
+        <h2 class="gift__title">Offrez un vol face au Mont-Blanc.</h2>
+        <p class="gift__text">Anniversaire, Noël, un grand moment à fêter ? Offrez un vol biplace à Chamonix, dans un bon cadeau valable un an. Émotion garantie.</p>
+      </div>
+      <a class="btn btn--accent btn--lg" href="#contact" data-prefill="Bonjour, je souhaite offrir un bon cadeau pour un vol en parapente.">Offrir un vol</a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="wrap contact">
+      <div class="contact__info" data-reveal>
+        <p class="eyebrow">Réservation & contact</p>
+        <h2 class="section__title">Prêt à décoller ?</h2>
+        <p class="section__lead">Une question, une date, un cadeau à offrir ? Écrivez-nous, on vous répond vite.</p>
+
+        <ul class="contact__list">
+          <li><span class="contact__ico" aria-hidden="true">✆</span><a href="tel:+33687985505">06 87 98 55 05</a></li>
+          <li><span class="contact__ico" aria-hidden="true">✉</span><a href="mailto:minat33@gmail.com">minat33@gmail.com</a></li>
+          <li><span class="contact__ico" aria-hidden="true">⌖</span><span>346 rue Joseph Vallot, 74400 Chamonix</span></li>
+        </ul>
+        <div class="contact__actions">
+          <a class="btn btn--whatsapp" href="tel:+33687985505">Appeler</a>
+          <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=Luciolle+parapente+Chamonix" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+
+      <form class="contact__form" data-reveal action="https://formspree.io/f/xnjrlebb" method="POST">
+        <input type="hidden" name="prospect" value="Luciolle">
+        <label>Nom<input type="text" name="nom" required autocomplete="name"></label>
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <label>Téléphone<input type="tel" name="telephone" autocomplete="tel"></label>
+        <label>Votre message<textarea name="message" rows="4" required></textarea></label>
+        <button class="btn btn--accent btn--block" type="submit">Envoyer ma demande</button>
+        <p class="contact__note">Réponse sous 24 h ouvrées.</p>
+        <p class="contact__status" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__name">Luciolle</span>
+        <p>Parapente biplace à Chamonix-Mont-Blanc.<br>Vols biplace accompagnés par un pilote professionnel.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Pied de page">
+        <a href="#stages">Vols</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.google.com/maps/search/?api=1&query=Luciolle+parapente+Chamonix" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Luciolle+parapente+Chamonix" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.ffvl.fr" target="_blank" rel="noopener">FFVL</a>
+      </div>
+    </div>
+    <div class="wrap footer__bottom">
+      <span>© 2026 Luciolle. Tous droits réservés.</span>
+      <span class="footer__credit">Maquette réalisée par <a href="https://lgdlcs.github.io/alt-tab-studio/" target="_blank" rel="noopener">alt-tab studio</a></span>
+    </div>
+  </footer>
+  </div><!-- /[data-scroll-container] -->
+
+  <!-- Bouton de contact flottant. PAR DÉFAUT : WhatsApp. Si le prospect N'A PAS de WhatsApp,
+       supprime ce bloc et décommente la « variante appel » juste en dessous. -->
+  <a class="wa-float wa-float--tel" href="tel:+33687985505" aria-label="Appeler Luciolle au 06 87 98 55 05">
+    <span class="wa-float__label">06 87 98 55 05</span>
+    <svg class="wa-float__icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>
+  </a>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

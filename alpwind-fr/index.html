@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="night">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlpWind — Parapente à Chamonix & Annecy · Vol montagne, stages & cross</title>
+  <meta name="description" content="AlpWind : école de parapente à Chamonix et Annecy, spécialiste du vol montagne. Baptêmes face au Mont-Blanc, stages de progression, cross et hike & fly. Réservez votre vol.">
+  <link rel="canonical" href="https://lgdlcs.github.io/parapente-maquettes/alpwind-fr">
+
+  <!-- Open Graph / partage -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AlpWind — Parapente de montagne à Chamonix">
+  <meta property="og:description" content="École de parapente à Chamonix & Annecy : baptêmes face au Mont-Blanc, stages, cross et hike & fly.">
+  <meta property="og:image" content="https://lgdlcs.github.io/parapente-maquettes/alpwind-fr/images/hero.jpg">
+  <meta property="og:url" content="https://lgdlcs.github.io/parapente-maquettes/alpwind-fr">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Version « Cinéma » : hero vidéo plein écran · Bricolage Grotesque (titres) + Hanken Grotesk (corps) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Locomotive Scroll (défilement fluide + parallaxe). Désactivé si prefers-reduced-motion. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "AlpWind",
+    "description": "École de parapente à Chamonix et Annecy — vol montagne, baptêmes, stages de progression, cross et hike & fly.",
+    "url": "https://lgdlcs.github.io/parapente-maquettes/alpwind-fr",
+    "image": "https://lgdlcs.github.io/parapente-maquettes/alpwind-fr/images/hero.jpg",
+    "telephone": "06 70 06 91 43",
+    "email": "info@alpwind.fr",
+    "address": { "@type": "PostalAddress", "addressLocality": "Chamonix", "addressRegion": "Mont-Blanc", "addressCountry": "FR" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4,9", "reviewCount": "70" }
+  }
+  </script>
+
+  
+  <script data-goatcounter="https://legrand.goatcounter.com/count"
+          data-goatcounter-settings='{"path":"/alpwind-fr"}'
+          async src="//gc.zgo.at/count.js"></script>
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ============ NAVBAR (liens centrés) ============ -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="AlpWind — accueil">
+        
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 28" width="34" height="24"><path d="M3,15 Q12,3 20,5 Q28,3 37,15 Q20,21 3,15 Z" fill="currentColor"/><line x1="7" y1="15" x2="19" y2="26" stroke="currentColor" stroke-width="1.3"/><line x1="20" y1="6" x2="20" y2="26" stroke="currentColor" stroke-width="1.3"/><line x1="33" y1="15" x2="21" y2="26" stroke="currentColor" stroke-width="1.3"/></svg>
+        </span>
+        <span class="brand__name">AlpWind</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
+        <a href="#stages">Stages</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn--accent nav__cta" href="#contact" data-prefill="Bonjour, je souhaite réserver un vol en parapente avec AlpWind.">Réserver</a>
+      </nav>
+
+      <button class="nav__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Conteneur Locomotive : la navbar, le WhatsApp flottant et la lightbox restent HORS du conteneur
+       (sinon le position:fixed casse sous la transformation de Locomotive). -->
+  <div data-scroll-container>
+  <main id="main">
+
+  <!-- ============ HERO VIDÉO ============ -->
+  <section class="hero" id="hero">
+    
+    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline poster="images/hero.jpg" aria-hidden="true">
+      <source src="https://cdn.pixabay.com/video/2022/11/11/138614-770315545_medium.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__bars" aria-hidden="true"></div>
+    <div class="wrap hero__content" data-scroll data-scroll-speed="1.6">
+      <p class="eyebrow eyebrow--light" data-reveal>Chamonix · Mont-Blanc</p>
+      <h1 class="hero__title" data-reveal>Le parapente de montagne, à Chamonix et Annecy.</h1>
+      <p class="hero__sub" data-reveal>École de parapente spécialiste du vol en altitude et du vol montagne. Baptêmes face au Mont-Blanc, stages de progression, cross et hike & fly — encadrés par des moniteurs passionnés, pour voler plus haut, plus loin, en toute confiance.</p>
+      <div class="hero__cta" data-reveal>
+        <a class="btn btn--accent btn--lg" href="#contact" data-prefill="Bonjour, je souhaite réserver un vol en parapente avec AlpWind.">Réserver un vol</a>
+        <a class="btn btn--ghost btn--lg" href="#stages">Voir les stages</a>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#intro" aria-label="Descendre"><span></span></a>
+  </section>
+
+  <!-- ============ POURQUOI NOUS ============ -->
+  <section class="section" id="intro">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Pourquoi voler avec nous</p>
+        <h2 class="section__title">Voler plus haut, plus loin, en confiance.</h2>
+        <p class="section__lead">Entre Chamonix et Annecy, deux grands sites du vol libre, AlpWind est spécialiste du parapente en altitude et du vol montagne. Du baptême face au Mont-Blanc au stage de cross, nous vous accompagnons à chaque étape de votre progression.</p>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">01</span>
+          <h3>Spécialistes du vol montagne</h3>
+          <p>Vol en altitude, monosurface, cross, vol-bivouac : une expertise pointue du parapente alpin, rare, au service de votre progression et de votre sécurité.</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">02</span>
+          <h3>Face au Mont-Blanc</h3>
+          <p>Planpraz, Plan de l'Aiguille, Aiguille du Midi… Décollez sur les sites les plus mythiques des Alpes, entre glaciers, aiguilles et grands espaces.</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">03</span>
+          <h3>Du baptême au cross longue distance</h3>
+          <p>Baptêmes, stages d'initiation et de perfectionnement, premiers cross, hike & fly : un parcours complet pour chaque niveau, des débutants aux pilotes confirmés.</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">04</span>
+          <h3>Une vraie aventure parapente</h3>
+          <p>Hike & fly, vol-bivouac et voyages (Dolomites, Andalousie, Autriche) : bien plus que des vols, une approche de la montagne et de la légèreté.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STAGES & FORMULES (cards media-overlay) ============ -->
+  <section class="section section--alt" id="stages">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Nos expériences</p>
+        <h2 class="section__title">Choisissez votre vol.</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card" data-reveal>
+          <img class="card__img" src="images/stage-1.jpg" alt="Baptême en biplace" loading="lazy" width="1000" height="750">
+          <div class="card__overlay">
+            <p class="card__tag">Découverte · Chamonix & Annecy</p>
+            <h3>Baptême en biplace</h3>
+            <p class="card__desc">Votre premier vol avec un moniteur, sur les plus beaux sites du massif. Du vol tranquille au-dessus de la vallée au grand vol depuis l'Aiguille du Midi.</p>
+            <a class="link-arrow" href="#tarifs">Voir les formules <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <img class="card__img" src="images/stage-2.jpg" alt="Stages & cross" loading="lazy" width="1000" height="750">
+          <div class="card__overlay">
+            <p class="card__tag">Progression · tous niveaux</p>
+            <h3>Stages & cross</h3>
+            <p class="card__desc">Initiation, monosurface, perfectionnement thermique, premiers cross et cross distance : montez en compétence avec un suivi pédagogique exigeant.</p>
+            <a class="link-arrow" href="#contact" data-prefill="Bonjour, je souhaite connaître les prochaines dates des stages de progression.">Demander les dates <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <img class="card__img" src="images/stage-3.jpg" alt="Hike & Fly & vol-bivouac" loading="lazy" width="1000" height="750">
+          <div class="card__overlay">
+            <p class="card__tag">Aventure · vol montagne</p>
+            <h3>Hike & Fly & vol-bivouac</h3>
+            <p class="card__desc">Montez à pied, volez en liberté, dormez sous les étoiles. Stages hike & fly itinérants et vol-bivouac pour vivre la montagne autrement.</p>
+            <a class="link-arrow" href="#contact" data-prefill="Bonjour, je souhaite des informations sur les stages hike & fly et vol-bivouac.">Demander les dates <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TARIFS ============ -->
+  <section class="section" id="tarifs">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Vols biplace</p>
+        <h2 class="section__title">Des vols pour chaque envie d'altitude.</h2>
+        <p class="section__lead">Tarifs indicatifs 2026 (à confirmer selon site et météo) · photos & vidéo HD du vol en option.</p>
+      </div>
+
+      <div class="pricing">
+        <article class="price" data-reveal>
+          <h3 class="price__name">Baptême Planpraz</h3>
+          <p class="price__amount">110<span>€</span></p>
+          <p class="price__desc">Le grand classique chamoniard : décollage à Planpraz, vue plongeante sur la vallée de Chamonix et les aiguilles.</p>
+          <ul class="price__list"><li>Décollage Planpraz</li><li>Vol panoramique vallée de Chamonix</li><li>Briefing & équipement fournis</li></ul>
+          <a class="btn btn--outline" href="#contact" data-prefill="Bonjour, je souhaite réserver la formule Baptême Planpraz (110 €).">Réserver</a>
+        </article>
+
+        <article class="price price--featured" data-reveal>
+          <span class="price__badge">Le plus choisi</span>
+          <h3 class="price__name">Plan de l'Aiguille</h3>
+          <p class="price__amount">140<span>€</span></p>
+          <p class="price__desc">Notre vol signature : décollage en altitude au Plan de l'Aiguille, face aux glaciers et au cœur du massif du Mont-Blanc.</p>
+          <ul class="price__list"><li>Décollage en altitude</li><li>Vue glaciers & aiguilles</li><li>Vol plus long · grand panorama</li></ul>
+          <a class="btn btn--accent" href="#contact" data-prefill="Bonjour, je souhaite réserver la formule Plan de l'Aiguille (140 €).">Réserver</a>
+        </article>
+
+        <article class="price" data-reveal>
+          <h3 class="price__name">Aiguille du Midi</h3>
+          <p class="price__amount">260<span>€</span></p>
+          <p class="price__desc">Le vol d'exception : décollage à près de 3 800 m, un vol longue durée inoubliable face au toit des Alpes.</p>
+          <ul class="price__list"><li>Décollage ~3 800 m</li><li>Vol longue durée</li><li>L'expérience la plus engagée</li></ul>
+          <a class="btn btn--outline" href="#contact" data-prefill="Bonjour, je souhaite réserver la formule Aiguille du Midi (260 €).">Réserver</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIE ============ -->
+  <section class="section section--alt" id="galerie">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">En images</p>
+        <h2 class="section__title">Là-haut, ça ressemble à ça.</h2>
+      </div>
+      <div class="gallery" id="gallery">
+        <button class="gallery__item gallery__item--tall" data-reveal><img src="images/gallery-1.jpg" alt="Baptême en parapente biplace à Chamonix" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-2.jpg" alt="Vol montagne face au Mont-Blanc" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-3.jpg" alt="Hike & fly dans le massif du Mont-Blanc" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item gallery__item--wide" data-reveal><img src="images/gallery-4.jpg" alt="Panorama alpin en parapente" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-5.jpg" alt="Stage de parapente en altitude" loading="lazy" width="1000" height="750"></button>
+        <button class="gallery__item" data-reveal><img src="images/gallery-6.jpg" alt="Voyage parapente avec AlpWind" loading="lazy" width="1000" height="750"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AVIS GOOGLE (carrousel) ============ -->
+  <section class="section" id="avis">
+    <div class="wrap">
+      <div class="reviews__head" data-reveal>
+        <div>
+          <p class="eyebrow">Ils ont volé avec nous</p>
+          <h2 class="section__title">Ce que disent nos pilotes.</h2>
+        </div>
+        <a class="reviews__badge" href="https://www.google.com/maps/search/?api=1&query=AlpWind+parapente+Chamonix" target="_blank" rel="noopener">
+          <span class="reviews__stars" aria-hidden="true">★★★★★</span>
+          <span class="reviews__score">4,9</span>
+          <span class="reviews__count">70 avis Google</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="reviews" id="reviews">
+      <div class="reviews__track" id="reviewsTrack">
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#E5734B">C</span><figcaption><span class="review__name">Camille D.</span><span class="review__date">il y a 2 semaines</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Vol depuis le Plan de l'Aiguille absolument magique. Moniteur ultra pro et rassurant, la vue sur les glaciers est irréelle. Je recommande à 100 %.</blockquote>
+        </figure>
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#4F7CAC">T</span><figcaption><span class="review__name">Thomas L.</span><span class="review__date">il y a 1 mois</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>J'ai fait le stage cross : pédagogie au top, on progresse vraiment. AlpWind, c'est l'école de référence pour le vol montagne, sans hésiter.</blockquote>
+        </figure>
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#5FA17D">S</span><figcaption><span class="review__name">Sophie M.</span><span class="review__date">il y a 1 mois</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Premier baptême face au Mont-Blanc, une émotion incroyable. Accueil chaleureux et grande attention à la sécurité. Hâte de revenir voler.</blockquote>
+        </figure>
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#B07BB0">J</span><figcaption><span class="review__name">Julien R.</span><span class="review__date">il y a 2 mois</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Stage hike & fly inoubliable : monter à pied, voler, bivouaquer en montagne. Une aventure humaine autant que sportive. Merci AlpWind !</blockquote>
+        </figure>
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#C9912E">L</span><figcaption><span class="review__name">Laëtitia B.</span><span class="review__date">il y a 3 mois</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Encadrement exigeant et bienveillant, parfait pour progresser en confiance. Les sites autour de Chamonix sont juste exceptionnels.</blockquote>
+        </figure>
+        <figure class="review">
+          <div class="review__top"><span class="review__avatar" style="--c:#3FA0A8">M</span><figcaption><span class="review__name">Marc V.</span><span class="review__date">il y a 3 mois</span></figcaption></div>
+          <span class="review__stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Voyage cross dans les Dolomites organisé au cordeau. Des conditions superbes et une équipe passionnée. Une expérience à refaire les yeux fermés.</blockquote>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BON CADEAU ============ -->
+  <section class="gift" id="cadeau">
+    <div class="wrap gift__inner" data-reveal>
+      <div>
+        <p class="eyebrow eyebrow--light">Une idée cadeau qui décolle</p>
+        <h2 class="gift__title">Offrez un vol face au Mont-Blanc.</h2>
+        <p class="gift__text">Anniversaire, Noël, un grand moment à fêter ? Offrez un baptême en parapente à Chamonix, dans un bon cadeau valable un an. Sensations garanties.</p>
+      </div>
+      <a class="btn btn--accent btn--lg" href="#contact" data-prefill="Bonjour, je souhaite offrir un bon cadeau pour un vol en parapente.">Offrir un vol</a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="wrap contact">
+      <div class="contact__info" data-reveal>
+        <p class="eyebrow">Réservation & contact</p>
+        <h2 class="section__title">Prêt à prendre de l'altitude ?</h2>
+        <p class="section__lead">Une question, une date, un cadeau à offrir ? Écrivez-nous, on vous répond vite.</p>
+
+        <ul class="contact__list">
+          <li><span class="contact__ico" aria-hidden="true">✆</span><a href="tel:+33670069143">06 70 06 91 43</a></li>
+          <li><span class="contact__ico" aria-hidden="true">✉</span><a href="mailto:info@alpwind.fr">info@alpwind.fr</a></li>
+          <li><span class="contact__ico" aria-hidden="true">⌖</span><span>Chamonix-Mont-Blanc, 74400</span></li>
+        </ul>
+        <div class="contact__actions">
+          <a class="btn btn--whatsapp" href="https://wa.me/33670069143?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20votre%20site." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=AlpWind+parapente+Chamonix" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+
+      <form class="contact__form" data-reveal action="https://formspree.io/f/xnjrlebb" method="POST">
+        <input type="hidden" name="prospect" value="AlpWind">
+        <label>Nom<input type="text" name="nom" required autocomplete="name"></label>
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <label>Téléphone<input type="tel" name="telephone" autocomplete="tel"></label>
+        <label>Votre message<textarea name="message" rows="4" required></textarea></label>
+        <button class="btn btn--accent btn--block" type="submit">Envoyer ma demande</button>
+        <p class="contact__note">Réponse sous 24 h ouvrées.</p>
+        <p class="contact__status" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__name">AlpWind</span>
+        <p>Parapente de montagne à Chamonix & Annecy.<br>École de parapente — spécialiste du vol montagne.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Pied de page">
+        <a href="#stages">Stages</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/alpwind.parapente/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/AlpWind.parapente/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.ffvl.fr" target="_blank" rel="noopener">FFVL</a>
+      </div>
+    </div>
+    <div class="wrap footer__bottom">
+      <span>© 2026 AlpWind. Tous droits réservés.</span>
+      <span class="footer__credit">Maquette réalisée par <a href="https://lgdlcs.github.io/alt-tab-studio/" target="_blank" rel="noopener">alt-tab studio</a></span>
+    </div>
+  </footer>
+  </div><!-- /[data-scroll-container] -->
+
+  <!-- Bouton de contact flottant. PAR DÉFAUT : WhatsApp. Si le prospect N'A PAS de WhatsApp,
+       supprime ce bloc et décommente la « variante appel » juste en dessous. -->
+  <a class="wa-float" href="https://wa.me/33670069143?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20votre%20site." target="_blank" rel="noopener" aria-label="Écrire à AlpWind sur WhatsApp — 06 70 06 91 43">
+    <span class="wa-float__label">06 70 06 91 43</span>
+    <svg class="wa-float__icon" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3C9.4 3 4 8.4 4 15c0 2.3.7 4.5 1.9 6.4L4 29l7.8-1.9c1.8 1 3.9 1.5 6 1.5h.2c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.9.9.9-3.8-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.5 4.5-9.9 10-9.9s9.9 4.4 9.9 9.9-4.4 9.9-9.9 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1s-.8 1-.9 1.2c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
+  </a>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
