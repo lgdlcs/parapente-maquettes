@@ -86,14 +86,16 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- Carrousel avis : duplique les cards pour la boucle ---------- */
-  var track = document.getElementById("reviewsTrack");
-  if (track && !reduceMotion) {
-    var clone = track.cloneNode(true);
-    Array.prototype.forEach.call(clone.children, function (c) {
-      c.setAttribute("aria-hidden", "true");
+  /* ---------- Carrousels avis : duplique les cards de chaque rangée pour la boucle ---------- */
+  if (!reduceMotion) {
+    var tracks = document.querySelectorAll(".reviews__track");
+    Array.prototype.forEach.call(tracks, function (track) {
+      var clone = track.cloneNode(true);
+      Array.prototype.forEach.call(clone.children, function (c) {
+        c.setAttribute("aria-hidden", "true");
+      });
+      while (clone.firstChild) track.appendChild(clone.firstChild);
     });
-    while (clone.firstChild) track.appendChild(clone.firstChild);
   }
 
   /* ---------- Lightbox galerie ---------- */
