@@ -247,11 +247,7 @@ h1,h2,h3 { font-family:var(--font-display); font-weight:700; line-height:1.04; l
 .reviews__score { font-family:var(--font-display); font-size:2rem; font-weight:700; line-height:1; }
 .reviews__count { font-size:.78rem; color:var(--muted); }
 
-/* bande decorative douce derriere les avis : donne de la matiere au flou des cartes glass */
 .reviews { position:relative; overflow:hidden; display:flex; flex-direction:column; gap:1.1rem; padding-block:1.4rem; }
-.reviews::before { content:""; position:absolute; inset:0; z-index:0; background:
-    radial-gradient(60% 80% at 12% 30%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%),
-    radial-gradient(55% 75% at 85% 70%, color-mix(in srgb, var(--primary) 20%, transparent), transparent 62%); pointer-events:none; }
 /* brouillard lateral : les cartes se dissolvent dans le fond de la page (canvas) */
 .reviews__fog { position:absolute; top:0; bottom:0; width:clamp(60px, 15%, 200px); z-index:3; pointer-events:none; }
 .reviews__fog--l { left:0; background:linear-gradient(to right, var(--canvas) 12%, color-mix(in srgb, var(--canvas) 55%, transparent) 55%, transparent); }
